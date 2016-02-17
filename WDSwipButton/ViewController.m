@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "WDSwipButton.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    WDSwipButton *btn = [[WDSwipButton alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    btn.normalTitle = @"下拉暂停";
+    btn.swipOutTitle = @"点击继续";
+    [self.view addSubview:btn];
 }
 
 - (void)didReceiveMemoryWarning {

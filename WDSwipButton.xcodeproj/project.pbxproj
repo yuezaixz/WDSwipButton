@@ -13,6 +13,7 @@
 		A645CDA01C74A9380058E2D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A645CD9E1C74A9380058E2D8 /* Main.storyboard */; };
 		A645CDA21C74A9380058E2D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A645CDA11C74A9380058E2D8 /* Assets.xcassets */; };
 		A645CDA51C74A9380058E2D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A645CDA31C74A9380058E2D8 /* LaunchScreen.storyboard */; };
+		A645CDAF1C74ACE00058E2D8 /* WDSwipButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A645CDAE1C74ACE00058E2D8 /* WDSwipButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		A645CDA11C74A9380058E2D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A645CDA41C74A9380058E2D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A645CDA61C74A9380058E2D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A645CDAD1C74ACE00058E2D8 /* WDSwipButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDSwipButton.h; sourceTree = "<group>"; };
+		A645CDAE1C74ACE00058E2D8 /* WDSwipButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDSwipButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 		A645CD941C74A9380058E2D8 /* WDSwipButton */ = {
 			isa = PBXGroup;
 			children = (
+				A645CDAC1C74AA090058E2D8 /* WDSwipButton */,
 				A645CD981C74A9380058E2D8 /* AppDelegate.h */,
 				A645CD991C74A9380058E2D8 /* AppDelegate.m */,
 				A645CD9B1C74A9380058E2D8 /* ViewController.h */,
@@ -77,6 +81,15 @@
 				A645CD961C74A9380058E2D8 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A645CDAC1C74AA090058E2D8 /* WDSwipButton */ = {
+			isa = PBXGroup;
+			children = (
+				A645CDAD1C74ACE00058E2D8 /* WDSwipButton.h */,
+				A645CDAE1C74ACE00058E2D8 /* WDSwipButton.m */,
+			);
+			name = WDSwipButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +165,7 @@
 				A645CD9D1C74A9380058E2D8 /* ViewController.m in Sources */,
 				A645CD9A1C74A9380058E2D8 /* AppDelegate.m in Sources */,
 				A645CD971C74A9380058E2D8 /* main.m in Sources */,
+				A645CDAF1C74ACE00058E2D8 /* WDSwipButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

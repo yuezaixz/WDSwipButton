@@ -173,6 +173,7 @@
             self.titleLabel.text = self.normalTitle;
         } completion:^(BOOL finished) {
             if (finished) {
+                [self displayLinkAction];
                 [self AddAniamtionLikeGameCenterBubble];
             }
         }];

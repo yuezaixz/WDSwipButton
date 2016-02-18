@@ -17,7 +17,16 @@ typedef enum SwipDirection {
     SwipDirectionCrazy,
 } SwipDirection;
 
+@protocol WDSwipButtonDelegate <NSObject>
+
+- (void)swipOut;
+- (void)swipBack;
+
+@end
+
 @interface WDSwipButton : UIView
+
+@property (weak, nonatomic) id<WDSwipButtonDelegate> delegate;
 
 @property (nonatomic,assign)CGFloat bubbleWidth;//直径
 @property (nonatomic,assign)CGFloat viscosity;//黏性

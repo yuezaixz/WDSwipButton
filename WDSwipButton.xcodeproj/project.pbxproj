@@ -123,6 +123,7 @@
 				TargetAttributes = {
 					A645CD911C74A9380058E2D8 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = L6U7BB57HF;
 					};
 				};
 			};
@@ -275,9 +276,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WDSwipButton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.davidandty.WDSwipButton;
+				PRODUCT_BUNDLE_IDENTIFIER = com.runmaf.WDSwipButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -286,9 +288,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WDSwipButton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.davidandty.WDSwipButton;
+				PRODUCT_BUNDLE_IDENTIFIER = com.runmaf.WDSwipButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -312,6 +315,7 @@
 				A645CDAB1C74A9380058E2D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -166,17 +166,15 @@
 #pragma mark -- UITapGestureRecognizer tapAction
 
 -(void)handleTouchGesture:(UITapGestureRecognizer *)ges{
-    if (r1 <= 6) {
+    if (self.isSwipOut) {
         self.isSwipOut = NO;
-        [UIView animateWithDuration:0.5 delay:0.0f usingSpringWithDamping:0.4f initialSpringVelocity:0.0f options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            self.frontView.center = oldBackViewCenter;
-            self.titleLabel.text = self.normalTitle;
-        } completion:^(BOOL finished) {
-            if (finished) {
-                [self displayLinkAction];
-                [self AddAniamtionLikeGameCenterBubble];
-            }
-        }];
+        self.frontView.center = oldBackViewCenter;
+        self.titleLabel.text = self.normalTitle;
+        [self displayLinkAction];
+        [self AddAniamtionLikeGameCenterBubble];
+        if (self.delegate && [self.delegate respondsToSelector:@selector(swipBack)]) {
+            [self.delegate swipBack];
+        }
     }
 }
 
@@ -215,6 +213,9 @@
             } completion:^(BOOL finished) {
                 if (finished) {
                     [self AddAniamtionLikeGameCenterBubble];
+                    if (self.delegate && [self.delegate respondsToSelector:@selector(swipOut)]) {
+                        [self.delegate swipOut];
+                    }
                 }
             }];
         } else {
@@ -245,7 +246,7 @@
     pathAnimation.duration = 5.0;
     
     CGMutablePathRef curvedPath = CGPathCreateMutable();
-    CGRect circleContainer = CGRectInset(self.frontView.frame, self.frontView.bounds.size.width / 2 - 3, self.frontView.bounds.size.width / 2 - 3);
+    CGRect circleContainer = CGRectInset(self.frontView.frame, self.frontView.bounds.size.width / 2 - 5, self.frontView.bounds.size.width / 2 - 5);
     CGPathAddEllipseInRect(curvedPath, NULL, circleContainer);
     
     pathAnimation.path = curvedPath;
@@ -255,7 +256,7 @@
     
     CAKeyframeAnimation *scaleX = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale.x"];
     scaleX.duration = 1;
-    scaleX.values = @[@1.0, @1.1, @1.0];
+    scaleX.values = @[@1.0, @1.2, @1.0];
     scaleX.keyTimes = @[@0.0, @0.5, @1.0];
     scaleX.repeatCount = INFINITY;
     scaleX.autoreverses = YES;
@@ -266,7 +267,7 @@
     
     CAKeyframeAnimation *scaleY = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale.y"];
     scaleY.duration = 1.5;
-    scaleY.values = @[@1.0, @1.1, @1.0];
+    scaleY.values = @[@1.0, @1.2, @1.0];
     scaleY.keyTimes = @[@0.0, @0.5, @1.0];
     scaleY.repeatCount = INFINITY;
     scaleY.autoreverses = YES;
